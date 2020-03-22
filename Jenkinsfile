@@ -4,6 +4,9 @@ pipeline{
         maven "MAVEN_HOME"
         jdk "JDK"
     }
+	triggers{
+		pollSCM('* * * * *')
+	}
 	stages{
 		stage('welcome'){
 			steps{
@@ -35,10 +38,11 @@ pipeline{
 		stage('Deploy Stage') {  
              steps {  
                  sh 'hostname'
-                 sh 'mvn deploy'
+                 sh 'mvn install'
 				}
                  
         }
 	}
     		
 }
+
