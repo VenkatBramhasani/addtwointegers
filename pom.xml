@@ -37,7 +37,7 @@
                     Sets the name of the property containing the settings
                     for JaCoCo runtime agent.
                 -->
-                <propertyName>surefireArgLine</propertyName>
+                <propertyName>jaCoCoArgLine</propertyName>
             </configuration>
         </execution>
         <!--
